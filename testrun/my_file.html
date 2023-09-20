@@ -1,0 +1,16 @@
+pod.yaml
+
+apiVersion: v1
+Kind: Pod 
+metadata: #dictionary
+  name: nginx
+  labels: #dictionary
+    app: nginx
+    type: frontend
+spec: #dictionary
+  containers: #list
+  - name: nginx
+    image: nginx
+
+    kubectl run nginx --image=nginx
+kubectl run nginx --image=nginx --dry-run=client -0 yaml
